@@ -5,6 +5,6 @@ var corazones = load("res://vidas/World.gd").new() #load heredo los metodos del 
 
 func _on_corazon2D_body_entered(body):
 	queue_free() #cuando un objeto colisione con el corazon, desaparecera.
-	corazones.quitar_vida() # llamo al metodo quitar_vida del srcipt cargado en corazones.
+	corazones.agregar_vida() # llamo al metodo quitar_vida del srcipt cargado en corazones.
 	pass 
 
