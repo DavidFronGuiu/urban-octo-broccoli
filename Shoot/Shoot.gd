@@ -1,4 +1,4 @@
-extends Area2D
+extends KinematicBody2D
 
 var direction : int
 onready var can_move : bool = true
@@ -9,13 +9,14 @@ func _ready() -> void:
 
 
 func _process(delta) -> void:
-	# Su única función es moverse en una dirección X, la cual es definida por quien dispara.
+	# Direccion de la bala
 	if can_move:
 		global_position.x += direction * delta
 
 
 func _on_VisibilityNotifier2D_screen_exited():
-	queue_free() # Si sale de pantalla, el disparo se elimina.
+	queue_free() 
+	# Si sale de pantalla, el disparo se elimina.
 
 
 func _on_Shoot_body_entered(body): # El área envía la señal body_entered.

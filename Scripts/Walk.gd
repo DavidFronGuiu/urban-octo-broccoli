@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 const vel = 25
-const velMax = 50
+const velMax = 150
 
 const salto = -300
 const up = Vector2(0,-1)
@@ -16,11 +16,11 @@ func _physics_process(delta): #Comprobación infinita
 	motion.y += gravedad
 	var friction = false
 	if Input.is_action_pressed("ui_right"):
-		sprite.flip_h = true
+		sprite.flip_h = false
 		animation.play("Walk")
 		motion.x = min(motion.x + vel, velMax)
 	elif Input.is_action_pressed("ui_left"):
-		sprite.flip_h = false
+		sprite.flip_h = true
 		animation.play("Walk")
 		motion.x = max(motion.x -vel, -velMax) #para hacer el giro menos repentino
 	else:
