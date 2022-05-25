@@ -11,6 +11,7 @@ func _process(delta) -> void:
 	
 	position.x += pixelesPorSegundos * delta
 	
-	if position.x > 50:
+	if position.x > 5000:
 		queue_free()
+
 

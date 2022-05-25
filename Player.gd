@@ -5,13 +5,16 @@ const velMax = 60
 const salto = -400
 const up = Vector2(0,-1)
 const gravedad = 15
+signal hp_changed(hp)
 
 const DISPARO = preload("res://Shoot.tscn")
 export var pixelesPorSegundos : int = 180
+export(int) var hp: int = 100 setget set_hp
+export(int) var max_hp: int =  100
 var otro = -1
 var tiempoDisparo= 0.5
 var tiempoCadaDisparo = 0.5
-export var health : int = 100
+export var health : int = 100   
 onready var sprite = $Sprite
 onready var animation = $AnimationPlayer
 onready var hitbox = $Hitbox
@@ -77,3 +80,7 @@ func disparar():
 		disparo.position = position
 		get_parent().add_child(disparo)
 		pass
+
+func set_hp(new_hp: int) -> void:
+	hp = clamp(new_hp, 0, max_hp)
+	emit_signal("hp_changed", hp)
