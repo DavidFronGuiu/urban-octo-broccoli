@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Player/1 (1).png" type="Texture" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
@@ -70,8 +70,16 @@ tracks/0/keys = {
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 11, 15.5 )
 
+[sub_resource type="CapsuleShape2D" id=7]
+radius = 5.5
+height = 11.0
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 9.5, 15.25 )
+
 [node name="KinematicBody2D" type="KinematicBody2D"]
-collision_mask = 4
+scale = Vector2( 2, 2 )
+collision_mask = 0
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -98,3 +106,15 @@ collision_mask = 3
 
 [node name="rigthRay" type="RayCast2D" parent="CollisionShape2D"]
 cast_to = Vector2( 10, 0 )
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+position = Vector2( -3.5, 1.5 )
+shape = SubResource( 7 )
+
+[node name="Hurtbox" type="Area2D" parent="."]
+
+[node name="HurtboxCol" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2( -3.5, 0.5 )
+shape = SubResource( 6 )
+
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]

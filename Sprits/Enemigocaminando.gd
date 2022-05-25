@@ -1,5 +1,6 @@
 extends KinematicBody2D
-
+onready var hitbox = $Hitbox
+export (int) var damage = 20
 const speed : float = 25.0
 # velocidad de desplazamiento 
 #const gravity : float = 25.0
@@ -10,9 +11,18 @@ var motion := Vector2()
 var direccion = -1
 #dirección de movimiento del personaje
 
+
+
 func _ready():
 	
-	motion.x = speed * direccion 
+	motion.x = speed * direccion
+
+	pass
+
+func _physics_process(delta):
+	delta=delta
+	_flip()
+	motion = move_and_slide (motion)
 	pass
 
 
@@ -32,8 +42,4 @@ func _flip():
 
 
 
-func _process(delta):
-	
-	_flip()
-	motion = move_and_slide (motion)
-	pass
+

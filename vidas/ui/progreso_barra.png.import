@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/progreso_barra.png-f9c757cd1fbd1dfc6af76e4af13b60a2.stex"
+path="res://.import/progreso_barra.png-e5ee9f494ab0acc60759db7eaafe0ccf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://final/assets/img/progreso_barra.png"
-dest_files=[ "res://.import/progreso_barra.png-f9c757cd1fbd1dfc6af76e4af13b60a2.stex" ]
+source_file="res://vidas/ui/progreso_barra.png"
+dest_files=[ "res://.import/progreso_barra.png-e5ee9f494ab0acc60759db7eaafe0ccf.stex" ]
 
 [params]
 
@@ -28,6 +28,7 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
+process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

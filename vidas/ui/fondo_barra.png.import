@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fondo_barra.png-bc28b62b8eb7acd6e58518464a815266.stex"
+path="res://.import/fondo_barra.png-0fe44c8a246e52fa42493e070895ae30.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://final/assets/img/fondo_barra.png"
-dest_files=[ "res://.import/fondo_barra.png-bc28b62b8eb7acd6e58518464a815266.stex" ]
+source_file="res://vidas/ui/fondo_barra.png"
+dest_files=[ "res://.import/fondo_barra.png-0fe44c8a246e52fa42493e070895ae30.stex" ]
 
 [params]
 
@@ -28,6 +28,7 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
+process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true
