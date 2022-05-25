@@ -1,7 +1,6 @@
 extends Area2D
 
-# var corazones = load("res://vidas/World.gd").new() #load heredo los metodos del script puesto en la ruta.
-# con el new(), instancio.
+
 onready var collission_shape: CollisionShape2D = get_node("CollisionShape2D")
 onready var tween: Tween = get_node("Tween")
 
@@ -16,10 +15,6 @@ func _on_corazon2D_body_entered(player: KinematicBody2D) -> void:
 	assert(prueba)
 	prueba = tween.start()
 	assert(prueba)
-
-	# player.health =  player.health + 15
-	# corazones.agregar_vida() # llamo al metodo quitar_vida del srcipt cargado en corazones.
-	 
 
 
 
