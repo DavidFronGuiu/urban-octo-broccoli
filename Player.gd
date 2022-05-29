@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
 const vel = 35
-const velMax = 60
-const salto = -400
+const velMax = 75
+const salto = -550
 const up = Vector2(0,-1)
 const gravedad = 15
 signal hp_changed(hp)
