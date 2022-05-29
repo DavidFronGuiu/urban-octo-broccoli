@@ -5,7 +5,7 @@ export (NodePath) var player_node
 onready var player = get_node(player_node)
 
 func _process(_delta):
-	$TextureProgress.value = player.health
+	$TextureProgress.value = player.health 
 	
 		
 #insertar en script de Player
@@ -13,10 +13,7 @@ func _process(_delta):
 	onready var hitbox = $Hitbox
 	
 	var health : int = 100
-
-	func game_over():
-		if health==0:
-			$interfaz.game_over
+	
 	func damage_player(damage):
 		health -= damage
 	
@@ -28,4 +25,4 @@ func _process(_delta):
 #insertar en script de Enemigo
 	onready var hitbox = $Hitbox
 	
-	export (int) var damage = 20
+	export (int) var damage = 15
